@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import './login-styles.css';
 import Dashboard from './components/Dashboard';
@@ -13,7 +13,7 @@ import PaymentsManager from './components/PaymentsManager';
 import axios from 'axios';
 import './index.css';
 
-axios.defaults.baseURL = 'http://api.vyntexassessments.co.ke';
+axios.defaults.baseURL = 'https://api.vyntexassessments.co.ke';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('adminToken'));
